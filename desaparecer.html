@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>teste</title>
+</head>
+<body>
+    <div class="box1">
+        Product
+        <button class="btn1">x</button>
+        <button class="btn2">+</button>
+    </div>
+    <style>
+        .box1{
+            color: white;
+            font-weight: ;
+            padding: 20px;
+            margin-top: 40px;
+            position: relative;
+            background: blueviolet;
+            border-radius: 10px;
+            border: 10px solid #2ffb02;
+
+            width: 50%;
+        }
+        .btn1, .box2{
+            border: 0;
+            color: #fff;
+            padding: 5px;
+            border-radius: 50%;
+            cursor: pointer;
+
+            height: 30px;
+            width: 30px;
+            background-color: red;
+            position: absolute;
+            top: -20px; right: -20px;
+
+            opacity: .6;
+            transition: .3s;
+        }
+        .btn1:hover{
+            opacity: 1;
+        }
+
+        /* animação */
+        .hidden {
+            opacity: .0;
+            transition: opacity 1s linear;
+        }
+
+        .btn2{
+            border: 0;
+            color: #fff;
+            padding: 5px;
+            border-radius: 50%;
+            cursor: pointer;
+
+            height: 30px;
+            width: 30px;
+            background-color: green;
+
+            opacity: .6;
+            transition: .3s;
+
+            display: none;
+        }
+    </style>
+
+    <script defer>
+        var btn1 = document.querySelector(".btn1")
+        // var btn2 = document.querySelector(".btn2")
+
+        var box1 = document.querySelector(".box1")
+
+        btn1.addEventListener("click", function(e){
+            e.stopPropagation()
+            // box1.style.display = "none"
+            box1.classList.add("hidden")
+            // box2.style.display("block")
+            // box1.style.animation = "fadeOut 2s ease-in-out"
+
+            // alert('oi')
+        })
+    </script>
+</body>
+</html>
